@@ -1,3 +1,7 @@
+/* =========================
+   RULE PAGE STYLES
+========================= */
+
 /* General layout for rule page */
 .rule-page-title {
     font-size: 2.6rem;
@@ -61,7 +65,12 @@
     font-size: 1.35rem;
 }
 
-/* Optional: reduce global padding so content fills more horizontally */
+
+/* =========================
+   STREAMLIT LAYOUT TWEAKS
+========================= */
+
+/* Reduce global padding so content fills more horizontally */
 .appview-container .main .block-container {
     padding-top: 1.0rem;
     padding-bottom: 1.5rem;
@@ -69,39 +78,62 @@
     padding-right: 2.0rem;
 }
 
+/* Make columns stretch consistently (helps deployed alignment) */
+div[data-testid="stHorizontalBlock"] {
+    align-items: stretch !important;
+}
 
 
-/* Make the actual button big */
-.stButton > button, .stButton button {
-     width: 100% !important;           /* full column width (same as red tile) */
+/* =========================
+   BUTTON STYLES (ROBUST)
+========================= */
+
+/* Make ALL Streamlit buttons big + full width (robust across Streamlit versions) */
+div.stButton > button,
+div.stButton > button[kind],
+div.stButton button,
+div[data-testid="stButton"] > button,
+div[data-testid="stButton"] button {
+    width: 100% !important;                 /* fill column */
     background-color: #204a87 !important;
-    color: white !important;
+    color: #ffffff !important;
 
-    padding: 1.3rem 0 !important;     /* same vertical padding as red tile */
+    padding: 1.3rem 0 !important;           /* tall button */
     border-radius: 30px !important;
-    font-size: 1.7rem  !important;
+    font-size: 1.7rem !important;
     font-weight: 800 !important;
 
     border: 3px solid #142f57 !important;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.25) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25) !important;
 
-    transition: background-color 0.2s ease,
-                transform 0.15s ease !important;
+    transition: background-color 0.2s ease, transform 0.15s ease !important;
+    line-height: 1.1 !important;
 }
 
-.stButton > button *,
-.stButton button * {
+/* Ensure label text inside button stays big (Streamlit may wrap it) */
+div[data-testid="stButton"] button p,
+div[data-testid="stButton"] button span,
+div.stButton button p,
+div.stButton button span {
     font-size: 1.7rem !important;
+    font-weight: 800 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #ffffff !important;
 }
 
 /* Hover effect */
-.stButton > button:hover, .stButton button:hover {
-    background-color: #2142a2;
-    color: #ffffff;
+div[data-testid="stButton"] button:hover,
+div.stButton button:hover {
+    background-color: #2142a2 !important;
+    color: #ffffff !important;
     transform: scale(1.05);
 }
 
-/* ========== GAME BOARD STYLES ========== */
+
+/* =========================
+   GAME BOARD STYLES
+========================= */
 
 .game-board-title {
     font-size: 3rem;
@@ -119,10 +151,9 @@
     border-radius: 14px;
     font-weight: 700;
     font-size: 1.6rem;
-    box-shadow: 0 4px 12px rgba(255, 255, 255);
+    /* FIXED: rgba() must have 4 values; this prevents inconsistent rendering */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
-
-
 
 /* Red tile for already-chosen questions */
 .used-money-tile {

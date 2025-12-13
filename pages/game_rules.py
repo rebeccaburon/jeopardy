@@ -30,9 +30,8 @@ with col1:
                 <li>After the category and level are chosen but before the question is revealed, all teams may bid fake money for the right to answer first.</li>
                 <li>Teams may bid up to $500 and the highest bid wins.</strong>.</li>
                 <li>If multiple teams bid $500 → Rock–Paper–Scissors decides the winner..</li>
-                <li>If first-answer team is wrong → dice decides the next team.</li>
-                <li>If the first team answers incorrectly → the question opens to all teams, and we roll a dice for who answers next.</li>
-                <li>All teams must write answers down to avoid shouting.</li>
+                <li>If the first team answers incorrectly → they take a punish sip and the question opens to all teams, and we roll a dice for who answers next.</li>
+                <li>All teams must write answers down.</li>
             </ul>
         </div>
         """,
@@ -60,7 +59,7 @@ with col2:
         </div>
 
         <div class="rule-card">
-            <h2 class="rule-heading">4. Lifeline — Half the Risk</h2>
+            <h2 class="rule-heading">3. Lifeline — Half the Risk</h2>
             <ul>
                 <li>Each team has one lifeline.</li>
                 <li>If they win a bidding round and activate it → they only pay <strong>half</strong> of their bid.</li>
@@ -75,7 +74,7 @@ with col3:
     st.markdown(
         """
         <div class="rule-card">
-            <h2 class="rule-heading">5. Sabotage System</h2>
+            <h2 class="rule-heading">4. Sabotage System</h2>
             <h3 class="rule-subheading">Silence Spell — $150</h3>
             <ul>
                 <li>Silence 1 player on another team for one round.</li>
@@ -88,7 +87,7 @@ with col3:
             </ul>
         </div>
         <div class="rule-card">
-            <h2 class="rule-heading">6. Broke But Not Out</h2>
+            <h2 class="rule-heading">5. Broke But Not Out</h2>
             <ul>
                 <li>If a team reaches $0:</li>
             </ul>

@@ -61,7 +61,7 @@ for lvl in levels:
                 )
             else:
                 # Clickable money button
-                if st.button(label, key=f"{cat}-{lvl}"):
+                if st.button(label, key=f"{cat}-{lvl}", use_container_width=True):
                     st.session_state.current_question_idx = int(idx)
                     st.session_state.used_cells.add(cell_key)
                     st.switch_page("pages/question_view.py")

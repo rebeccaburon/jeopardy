@@ -1,51 +1,68 @@
 /* =========================
-   RULE PAGE COMPACT OVERRIDES
-   (Paste at very bottom of CSS)
+   RULE PAGE STYLES
 ========================= */
 
-/* Slightly smaller title + less spacing */
+/* General layout for rule page */
 .rule-page-title {
-  font-size: 2.2rem;
-  margin-bottom: 0.9rem;
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-align: left;
 }
 
-/* Tighten cards so they fit on screen */
+/* Card styling */
 .rule-card {
-  padding: 0.95rem 1.1rem;   /* was 1.25rem 1.5rem */
-  margin-bottom: 0.9rem;     /* was 1.5rem */
-  border-radius: 16px;       /* keep same */
+    background-color: #204a87;
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(182, 170, 190, 0);
+    border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-/* Make card text a bit smaller (this is the big win) */
+/* Make ALL text inside rule cards white */
+.rule-card,
+.rule-card p,
+.rule-card li,
+.rule-card ul,
+.rule-card h2,
+.rule-card h3 {
+    color: #ffffff !important;
+}
+
+/* Main section headings (Teams, Money System, etc.) */
+.rule-heading {
+    color: #FA92EB;
+    font-weight: 800;
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
+}
+
+/* Subheadings like “Bidding for First Attempt”, “Silence Spell” */
+.rule-subheading {
+    color: #FA92EB;
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+
+/* Lists */
+.rule-card ul {
+    margin-top: 0.2rem;
+    margin-bottom: 0.6rem;
+    padding-left: 1.2rem;
+}
+
+.rule-card ul.nested-list {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+}
+
+/* Slightly larger text for TV readability */
 .rule-card li,
 .rule-card p {
-  font-size: 1.1rem;         /* was 1.35rem */
-  line-height: 1.35;
-}
-
-/* Headings slightly smaller to reduce height */
-.rule-heading {
-  font-size: 1.25rem;        /* was 1.4rem */
-  margin-bottom: 0.4rem;
-}
-
-.rule-subheading {
-  font-size: 1.05rem;        /* was 1.15rem */
-  margin-top: 0.55rem;
-  margin-bottom: 0.2rem;
-}
-
-/* Reduce list spacing inside the cards */
-.rule-card ul {
-  margin-top: 0.15rem;
-  margin-bottom: 0.4rem;
-  padding-left: 1.1rem;
-}
-
-/* Make the overall page use a bit more width & less vertical padding */
-.appview-container .main .block-container {
-  padding-top: 0.8rem;       /* was 1.0rem */
-  padding-bottom: 0.8rem;    /* was 1.5rem */
+    font-size: 1.35rem;
 }
 
 
@@ -64,14 +81,6 @@
 /* Make columns stretch consistently (helps deployed alignment) */
 div[data-testid="stHorizontalBlock"] {
     align-items: stretch !important;
-}
-
-/* Keep Start Game button compact (still nice-looking) */
-div[data-testid="stButton"] > button,
-div.stButton > button {
-  padding: 0.9rem 0 !important;     /* was 1.3rem */
-  font-size: 1.4rem !important;     /* was 1.7rem */
-  border-radius: 26px !important;
 }
 
 

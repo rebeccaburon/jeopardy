@@ -1,5 +1,6 @@
 import streamlit as st
 from pathlib import Path
+import time
 from utils.loader import load_css
 
 # Use wide layout (if not already set in app.py)
@@ -9,8 +10,9 @@ st.set_page_config(layout="wide")
 
 load_css()
 
+
 # ---- Title ----
-st.markdown('<div class="rule-page-title">📜 GAME RULES</div>', unsafe_allow_html=True)
+st.markdown('<div class="rule-page-title">📜 RULES OF THE GAME</div>', unsafe_allow_html=True)
 
 # ---- 3 columns ----
 col1, col2, col3 = st.columns(3, gap="large")
@@ -87,4 +89,4 @@ with col3:
     )
 
 if st.button("Start Game", key="button"):
-        st.switch_page("pages/game_board.py")
+    st.switch_page("pages/game_board.py")

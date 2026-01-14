@@ -6,6 +6,8 @@ from utils.loader import load_css
 st.set_page_config(layout="wide")
 load_css()
 
+
+
 # ---- State helpers ----
 def init_state():
     if "used_cells" not in st.session_state:

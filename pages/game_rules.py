@@ -88,5 +88,5 @@ with col3:
         unsafe_allow_html=True,
     )
 
-if st.button("Start Game", key="button", unsafe_allow_html=True):
+if st.button("Start Game", key="button"):
     st.switch_page("pages/game_board.py")

@@ -71,7 +71,7 @@ with col3:
                 <li>Silence a team for one round.</li>
                 <li>If they speak → <strong>Their team loses $200</strong>.</li>
             </ul>
-            <h3 class="rule-subheading">Money Freezze — $600</h3>
+            <h3 class="rule-subheading">Money Freeze — $600</h3>
              <ul>
                 <li>Freeze another team’s money for their next question.</li>
                 <li>This mean that they can not spend or earn any money</strong>.</li>

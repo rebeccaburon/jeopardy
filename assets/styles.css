@@ -88,6 +88,13 @@ div[data-testid="stHorizontalBlock"] {
    BUTTON STYLES (ROBUST)
 ========================= */
 
+/* ✅ FIX (minimal): Ensure button wrapper is full width on Streamlit Cloud */
+div[data-testid="stButton"],
+div.stButton {
+    width: 100% !important;
+    display: block !important;
+}
+
 /* Make ALL Streamlit buttons big + full width (robust across Streamlit versions) */
 div.stButton > button,
 div.stButton > button[kind],
@@ -122,12 +129,12 @@ div.stButton button span {
     color: #ffffff !important;
 }
 
-/* Hover effect */
+/* ✅ FIX (minimal): Hover effect without resizing (avoids weird deployed “pill” growth) */
 div[data-testid="stButton"] button:hover,
 div.stButton button:hover {
     background-color: #2142a2 !important;
     color: #ffffff !important;
-    transform: scale(1.05);
+    transform: translateY(-2px);
 }
 
 

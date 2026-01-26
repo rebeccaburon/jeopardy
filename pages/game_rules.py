@@ -66,11 +66,6 @@ with col3:
             <h2 class="rule-heading">Sabotage System</h2>
             <p>A team may sabotage only on their turn, and before choosing a question.</p>
             <p>You may: <strong>Buy ONE</strong> sabotage, or skip it.</p>
-            <h3 class="rule-subheading">Silence Spell — $500</h3>
-            <ul>
-                <li>Silence a team for one round.</li>
-                <li>If they speak → <strong>Their team loses $200</strong>.</li>
-            </ul>
             <h3 class="rule-subheading">Money Freeze — $600</h3>
              <ul>
                 <li>Freeze another team’s money for their next question.</li>

@@ -82,5 +82,9 @@ with col3:
         """,
         unsafe_allow_html=True,
     )
-if st.button("Start Game", key="button"):
+st.markdown('<div class="start-btn-wrap">', unsafe_allow_html=True)
+
+if st.button("Start Game", key="start_game", use_container_width=True):
     st.switch_page("pages/game_board.py")
+
+st.markdown('</div>', unsafe_allow_html=True)
